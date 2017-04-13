@@ -1,0 +1,1 @@
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\UI\UI.UWP\UI.UWP.csproj;x86
