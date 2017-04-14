@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UI.Abstractions;
 using UI.Models;
 using Xamarin.Forms;
+using UI.Pages;
 
 namespace UI.ViewModels
 {
@@ -13,19 +14,19 @@ namespace UI.ViewModels
     {
         public TaskListViewModel()
         {
-            Title = "Task List";
+            Title = "Confessions";
             RefreshList();
         }
 
-        ObservableCollection<TodoItem> items = new ObservableCollection<TodoItem>();
-        public ObservableCollection<TodoItem> Items
+        ObservableCollection<ConfessionNote> items = ConfessionNote.ConfessionsList;
+        public ObservableCollection<ConfessionNote> Items
         {
             get { return items; }
             set { SetProperty(ref items, value, "Items"); }
         }
 
-        TodoItem selectedItem;
-        public TodoItem SelectedItem
+        ConfessionNote selectedItem;
+        public ConfessionNote SelectedItem
         {
             get { return selectedItem; }
             set
@@ -33,7 +34,7 @@ namespace UI.ViewModels
                 SetProperty(ref selectedItem, value, "SelectedItem");
                 if (selectedItem != null)
                 {
-                    Application.Current.MainPage.Navigation.PushAsync(new Pages.TaskDetail(selectedItem));
+                    Application.Current.MainPage.Navigation.PushAsync(new Pages.TaskDetail());
                     SelectedItem = null;
                 }
             }
@@ -50,7 +51,7 @@ namespace UI.ViewModels
 
             try
             {
-                var table = App.CloudService.GetTable<TodoItem>();
+                var table = App.CloudService.GetTable<ConfessionNote>();
                 var list = await table.ReadAllItemsAsync();
                 Items.Clear();
                 foreach (var item in list)

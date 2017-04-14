@@ -1,4 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using UI.Abstractions;
 using UI.Models;
 using UI.ViewModels;
 using Xamarin.Forms;
@@ -10,12 +13,12 @@ namespace UI.Pages
     public partial class TaskDetail : ContentPage
     {
         string selecteditem;
+        ICloudTable<ConfessionNote> table = App.CloudService.GetTable<ConfessionNote>();
+        public ConfessionNote note { get; set; }
+
         public TaskDetail()
         {
             InitializeComponent();
-
-
-
         }
         private void PickerCtl_SelectedIndexChanged(object sender, System.EventArgs e)
         {
@@ -30,6 +33,8 @@ namespace UI.Pages
         private void SaveButton_Clicked(object sender, System.EventArgs e)
         {
             ConfessionNote note = new ConfessionNote(editor1.Text, SignatureName.Text, selecteditem);
+            ExecuteSaveCommand();
+        }
 
             Command cmdSave;
 
@@ -43,15 +48,15 @@ namespace UI.Pages
 
             try
             {
-                if (Item.Id == null)
+                if (note.Id == null)
                 {
-                    await table.CreateItemAsync(Item);
+                    await table.CreateItemAsync(note);
                 }
                 else
                 {
-                    await table.UpdateItemAsync(Item);
+                    await table.UpdateItemAsync(note);
                 }
-                MessagingCenter.Send<TaskDetailViewModel>(this, "ItemsChanged");
+                MessagingCenter.Send<TaskDetail>(this, "ItemsChanged");
                 await Application.Current.MainPage.Navigation.PopAsync();
             }
             catch (Exception ex)
@@ -63,8 +68,10 @@ namespace UI.Pages
             {
                 IsBusy = false;
             }
-        } }
+        }
     }
+
+}
         
 
   
