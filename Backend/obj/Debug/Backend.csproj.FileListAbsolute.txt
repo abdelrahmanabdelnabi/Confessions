@@ -163,3 +163,6 @@ C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\
 C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\bin\System.Net.Http.Primitives.xml
 C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Debug\Backend.csproj.App.config
 C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Debug\Backend.csprojResolveAssemblyReference.cache
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Debug\Backend.Migrations.newcolumn.resources
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Debug\Backend.csproj.GenerateResource.Cache
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Debug\Backend.Migrations.ItemToDoMigration.resources

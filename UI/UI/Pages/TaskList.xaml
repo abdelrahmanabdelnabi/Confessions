@@ -6,26 +6,29 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView BackgroundColor="#7F7F7F"
+                      HasUnevenRows="true"
                 CachingStrategy="RecycleElement"
                 IsPullToRefreshEnabled="True"
                 IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                 ItemsSource="{Binding Items}"
                 RefreshCommand="{Binding RefreshCommand}"
-                RowHeight="50"
                 SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <StackLayout Orientatation="Vertical" >
+                            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="10">
                                 <StackLayout HorizontalOptions="FillAndExpand"
                            Orientation="Horizontal"
                            Padding="10"
                            VerticalOptions="CenterAndExpand">
-                                <Label HorizontalOptions="FillAndExpand"
+                                    <Label HorizontalOptions="FillAndExpand"
                        Text="{Binding Text}"
                        TextColor="#272832" />
-                                <Switch IsToggled="{Binding Complete, Mode=OneWay}" />
-                            </StackLayout>
+                                    <Switch IsToggled="{Binding Complete, Mode=OneWay}" />
+                                </StackLayout>
+                                <Label Text="{Binding Description, Mode=OneWay}"
+                                       VerticalOptions="Center"/>
+
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

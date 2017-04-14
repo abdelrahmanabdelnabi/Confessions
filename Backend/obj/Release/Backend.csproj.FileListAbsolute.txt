@@ -158,3 +158,11 @@ c:\users\abdou\onedrive\documents\visual studio 2017\Projects\Solution1\Backend\
 c:\users\abdou\onedrive\documents\visual studio 2017\Projects\Solution1\Backend\obj\Release\Backend.csprojResolveAssemblyReference.cache
 c:\users\abdou\onedrive\documents\visual studio 2017\Projects\Solution1\Backend\obj\Release\Backend.dll
 c:\users\abdou\onedrive\documents\visual studio 2017\Projects\Solution1\Backend\obj\Release\Backend.pdb
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\bin\System.Net.Http.Extensions.dll
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\bin\System.Net.Http.Primitives.dll
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\bin\System.Net.Http.Extensions.xml
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\bin\System.Net.Http.Primitives.xml
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Release\Backend.csproj.App.config
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Release\Backend.Migrations.newcolumn.resources
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Release\Backend.csproj.GenerateResource.Cache
+C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\Backend\obj\Release\Backend.Migrations.ItemToDoMigration.resources

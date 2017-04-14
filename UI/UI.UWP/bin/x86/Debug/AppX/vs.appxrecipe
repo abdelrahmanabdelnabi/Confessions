@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\UI\UI.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-13T21:34:12.973</Modified>
+      <Modified>2017-04-14T11:46:29.031</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\UI\UI.UWP\bin\x86\Debug\UI.UWP.exe">
       <PackagePath>entrypoint\UI.UWP.exe</PackagePath>
-      <Modified>2017-04-13T21:34:10.631</Modified>
+      <Modified>2017-04-14T11:46:26.771</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\abdou\.nuget\packages\Microsoft.Azure.Mobile.Client\3.1.0\lib\netcore45\Microsoft.WindowsAzure.Mobile.Ext.dll">
       <PackagePath>Microsoft.WindowsAzure.Mobile.Ext.dll</PackagePath>
@@ -704,11 +704,11 @@
     <AppxPackagedFile Include="C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\UI\UI.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-04-13T21:34:12.457</Modified>
+      <Modified>2017-04-14T11:46:28.464</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\abdou\OneDrive\Documents\Visual Studio 2017\Projects\Solution1\UI\UI.UWP\bin\x86\Debug\Core\UI.UWP.exe">
       <PackagePath>UI.UWP.exe</PackagePath>
-      <Modified>2017-04-13T21:34:12.967</Modified>
+      <Modified>2017-04-14T11:46:29.021</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

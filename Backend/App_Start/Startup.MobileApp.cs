@@ -9,6 +9,7 @@ using Microsoft.Azure.Mobile.Server.Config;
 using Backend.DataObjects;
 using Backend.Models;
 using Owin;
+using System.Data.Entity.Migrations;
 
 namespace Backend
 {
@@ -23,28 +24,11 @@ namespace Backend
                 .AddTablesWithEntityFramework()
                 .ApplyTo(config);
 
-            Database.SetInitializer(new MobileServiceInitializer());
+            // Automatic Code First Migrations
+            var migrator = new DbMigrator(new Migrations.Configuration());
+            migrator.Update();
 
             app.UseWebApi(config);
-        }
-    }
-
-    public class MobileServiceInitializer : CreateDatabaseIfNotExists<MobileServiceContext>
-    {
-        protected override void Seed(MobileServiceContext context)
-        {
-            List<TodoItem> todoItems = new List<TodoItem>
-            {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false }
-            };
-
-            foreach (TodoItem todoItem in todoItems)
-            {
-                context.Set<TodoItem>().Add(todoItem);
-            }
-
-            base.Seed(context);
         }
     }
 }

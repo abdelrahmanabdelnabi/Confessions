@@ -166,9 +166,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\ItemToDoController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataObjects\ItemTodo.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="Migrations\201704140536018_newcolumn.cs" />
+    <Compile Include="Migrations\201704140536018_newcolumn.Designer.cs">
+      <DependentUpon>201704140536018_newcolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704140958070_ItemToDoMigration.cs" />
+    <Compile Include="Migrations\201704140958070_ItemToDoMigration.Designer.cs">
+      <DependentUpon>201704140958070_ItemToDoMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -190,6 +201,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\tutorialchapter1 - Web Deploy.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704140536018_newcolumn.resx">
+      <DependentUpon>201704140536018_newcolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704140958070_ItemToDoMigration.resx">
+      <DependentUpon>201704140958070_ItemToDoMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
