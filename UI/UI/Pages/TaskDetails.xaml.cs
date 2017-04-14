@@ -8,10 +8,27 @@ namespace UI.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TaskDetail : ContentPage
     {
-        public TaskDetail(TodoItem item = null)
+
+        public TaskDetail()
         {
             InitializeComponent();
-            BindingContext = new TaskDetailViewModel(item);
+           
+
+
+    }
+        private void PickerCtl_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            if (PickerCtl != null && PickerCtl.SelectedIndex <= PickerCtl.Items.Count)
+     {
+                var selecteditem = PickerCtl.Items[PickerCtl.SelectedIndex];
+                DisplayAlert("Picker Control", selecteditem, "OK");
+            }
+        }
+
+        private void SaveButton_Clicked(object sender, System.EventArgs e)
+        {
+            ConfessionNote note = new ConfessionNote(editor1.Text, SignatureName.Text, selecteditem);
+
         }
     }
 }
