@@ -2,26 +2,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UI.Pages.TaskDetail"
-             Title="{Binding Title}">
+             Title=" Write your confession ">
     <ContentPage.Content>
         <StackLayout Padding="10" Spacing="10">
-            <Label Text="What should I be doing?"/>
-            <Entry Text="{Binding Item.Text}"/>
-            <Label Text="Description"/>
-            <Entry Text="{Binding Item.Description}"/>
-            <Label Text="Completed?"/>
-            <Switch IsToggled="{Binding Item.Complete}"/>
-            <StackLayout VerticalOptions="CenterAndExpand"/>
-            <StackLayout Orientation="Vertical" VerticalOptions="End">
-                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                    <Button BackgroundColor="#A6E55E"
-                  Command="{Binding SaveCommand}"
-                  Text="Save" TextColor="White"/>
-                    <Button BackgroundColor="Red"
-                  Command="{Binding DeleteCommand}"
-                  Text="Delete" TextColor="White"/>
-                </StackLayout>
-            </StackLayout>
+            <Label Text="Your Confession"/>
+            <Editor x:Name="editor1" Text="Today,I.." TextColor="DarkViolet" BackgroundColor="FloralWhite"  x:Uid="Editor1" VerticalOptions="CenterAndExpand"  IsEnabled="True"  HeightRequest="180" Completed="EditorCompleted" TextChanged="EditorTextChanged"   />
+            <Label Text="Signature"/>
+            <Entry x:Name="SignatureName" Placeholder="Leave a signature"/>
+            <Picker Title="Picker(Combo Demo)" x:Name="PickerCtl"  
+            SelectedIndexChanged="PickerCtl_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Uncategorized</x:String>
+                    <x:String>Happy</x:String>
+                    <x:String>Sad</x:String>
+                    <x:String>Funny</x:String>
+                    <x:String>Angry</x:String>
+                </Picker.Items>
+                <Picker.SelectedIndex>
+                    0
+                </Picker.SelectedIndex>
+            </Picker>
+            <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked" />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
