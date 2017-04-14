@@ -18,9 +18,7 @@
                         <ViewCell>
                             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="10">
                                 <StackLayout HorizontalOptions="FillAndExpand"
-                           Orientation="Horizontal"
-                           Padding="10"
-                           VerticalOptions="CenterAndExpand">
+                           Orientation="Horizontal" Padding="10" VerticalOptions="CenterAndExpand">
                                     <Label HorizontalOptions="FillAndExpand"
                        Text="{Binding Text}"
                        TextColor="#272832" />
@@ -28,7 +26,6 @@
                                 </StackLayout>
                                 <Label Text="{Binding Description, Mode=OneWay}"
                                        VerticalOptions="Center"/>
-
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
